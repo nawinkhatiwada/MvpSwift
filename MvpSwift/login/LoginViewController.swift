@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController, LoginView {
-    var presenter: LoginPresenter?
+    private var presenter: LoginPresenter?
     @IBOutlet weak var tbUsername: UITextField!
     @IBOutlet weak var tbPassword: UITextField!
     private var progress: UIActivityIndicatorView?
@@ -43,12 +43,12 @@ class LoginViewController: UIViewController, LoginView {
     }
     
     func showLoginSuccess(message: String) {
-        progress?.stopAnimating()
+        hideDialog()
         self.showAlertDialog(title: "Login Success", message: message)
     }
     
     func showError(message: String) {
-        progress?.stopAnimating()
+        hideDialog()
         self.showAlertDialog(title: "Login Error", message: message)
     }
     
@@ -56,12 +56,17 @@ class LoginViewController: UIViewController, LoginView {
         let indicator: UIActivityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
         indicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         indicator.center = self.view.center
+        indicator.hidesWhenStopped = true
         self.view.addSubview(indicator)
         self.view.bringSubviewToFront(indicator)
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         return indicator
     }
     
+    private func hideDialog(){
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        progress?.stopAnimating()
+    }
     
     private func showAlertDialog(title:String?, message:String?){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
