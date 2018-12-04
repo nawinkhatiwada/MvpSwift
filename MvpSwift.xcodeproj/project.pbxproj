@@ -10,7 +10,6 @@
 		08B493C8ABEB4B152B95743A /* Pods_MvpSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB5A0B6C985885273E291D3 /* Pods_MvpSwift.framework */; };
 		87D30D29675CDB36E8D06CB8 /* Pods_MvpSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE0D0247A89D4ACAAAF2134 /* Pods_MvpSwiftTests.framework */; };
 		DD5F00AD21B3CF8C000BA4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5F00AC21B3CF8C000BA4A8 /* AppDelegate.swift */; };
-		DD5F00AF21B3CF8C000BA4A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5F00AE21B3CF8C000BA4A8 /* ViewController.swift */; };
 		DD5F00B221B3CF8C000BA4A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5F00B021B3CF8C000BA4A8 /* Main.storyboard */; };
 		DD5F00B421B3CF8E000BA4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD5F00B321B3CF8E000BA4A8 /* Assets.xcassets */; };
 		DD5F00B721B3CF8E000BA4A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5F00B521B3CF8E000BA4A8 /* LaunchScreen.storyboard */; };
@@ -61,7 +60,6 @@
 		DA47825136498043D8449563 /* Pods-MvpSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvpSwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvpSwiftUITests/Pods-MvpSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DD5F00A921B3CF8C000BA4A8 /* MvpSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvpSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD5F00AC21B3CF8C000BA4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD5F00AE21B3CF8C000BA4A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD5F00B121B3CF8C000BA4A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD5F00B321B3CF8E000BA4A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD5F00B621B3CF8E000BA4A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				DD5F00DD21B3D5BF000BA4A8 /* base */,
 				DD5F00DA21B3CFCB000BA4A8 /* data */,
 				DD5F00AC21B3CF8C000BA4A8 /* AppDelegate.swift */,
-				DD5F00AE21B3CF8C000BA4A8 /* ViewController.swift */,
 				DD5F00B021B3CF8C000BA4A8 /* Main.storyboard */,
 				DD5F00B321B3CF8E000BA4A8 /* Assets.xcassets */,
 				DD5F00B521B3CF8E000BA4A8 /* LaunchScreen.storyboard */,
@@ -527,7 +524,6 @@
 				DD5F00E721B3DA61000BA4A8 /* LoginResponse.swift in Sources */,
 				DD5F00FD21B54FA6000BA4A8 /* UserRepositoryImpl.swift in Sources */,
 				DD5F00F221B5376A000BA4A8 /* UserRemoteImpl.swift in Sources */,
-				DD5F00AF21B3CF8C000BA4A8 /* ViewController.swift in Sources */,
 				DD5F00AD21B3CF8C000BA4A8 /* AppDelegate.swift in Sources */,
 				DD5F00EB21B3ED84000BA4A8 /* MvpApiService.swift in Sources */,
 				DD5F00E921B3DBDC000BA4A8 /* LocalRepo.swift in Sources */,
