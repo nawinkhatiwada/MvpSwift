@@ -9,7 +9,8 @@ target 'MvpSwift' do
 
     pod 'Alamofire', '~> 4.7'
     pod 'AlamofireObjectMapper', '~> 5.2.0'
-
+    pod 'RxSwift', '~> 4.0'
+    pod 'RxAlamofire', '~>4.0'
 
 
   target 'MvpSwiftTests' do

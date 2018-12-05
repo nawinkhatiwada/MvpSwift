@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		08B493C8ABEB4B152B95743A /* Pods_MvpSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB5A0B6C985885273E291D3 /* Pods_MvpSwift.framework */; };
 		87D30D29675CDB36E8D06CB8 /* Pods_MvpSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE0D0247A89D4ACAAAF2134 /* Pods_MvpSwiftTests.framework */; };
+		A73FBF5521B7D4E5009D46CB /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73FBF5421B7D4E5009D46CB /* ObservableType.swift */; };
+		A73FBF5921B7E722009D46CB /* NotNullMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73FBF5821B7E722009D46CB /* NotNullMapper.swift */; };
 		DD5D61E321B7A58700F3C6A7 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D61E221B7A58700F3C6A7 /* PreferenceManager.swift */; };
 		DD5D61E621B7D59300F3C6A7 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D61E521B7D59300F3C6A7 /* UserRouter.swift */; };
 		DD5D61E821B7E23800F3C6A7 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D61E721B7E23800F3C6A7 /* Urls.swift */; };
@@ -59,6 +61,8 @@
 		2AB5A0B6C985885273E291D3 /* Pods_MvpSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvpSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C933D7DA1AA2B04B85018CB /* Pods_MvpSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvpSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DD1EA4AF77CC1BD499CCD0 /* Pods-MvpSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvpSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvpSwiftTests/Pods-MvpSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		A73FBF5421B7D4E5009D46CB /* ObservableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableType.swift; sourceTree = "<group>"; };
+		A73FBF5821B7E722009D46CB /* NotNullMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotNullMapper.swift; sourceTree = "<group>"; };
 		ABE0D0247A89D4ACAAAF2134 /* Pods_MvpSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvpSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6CA43DFA933ED1BBDA0ABE7 /* Pods-MvpSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvpSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvpSwift/Pods-MvpSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		DA47825136498043D8449563 /* Pods-MvpSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvpSwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvpSwiftUITests/Pods-MvpSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 		DD5F00DE21B3D5D1000BA4A8 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				DD5F00FA21B54DE8000BA4A8 /* LoginModel.swift */,
 				DD5F00E121B3D604000BA4A8 /* api */,
 			);
 			path = model;
@@ -277,7 +282,12 @@
 			isa = PBXGroup;
 			children = (
 				DD5F00F421B537C2000BA4A8 /* Utils.swift */,
+<<<<<<< HEAD
 				DD5D61E721B7E23800F3C6A7 /* Urls.swift */,
+=======
+				A73FBF5421B7D4E5009D46CB /* ObservableType.swift */,
+				A73FBF5821B7E722009D46CB /* NotNullMapper.swift */,
+>>>>>>> Rx integration
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -294,7 +304,6 @@
 		DD5F00F921B54DD5000BA4A8 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				DD5F00FA21B54DE8000BA4A8 /* LoginModel.swift */,
 				DDE525BA21B636C8006C5EC4 /* LoginPagePresenter.swift */,
 				DDE525BC21B639BE006C5EC4 /* LoginContract.swift */,
 				DDE525BE21B63ABD006C5EC4 /* LoginViewController.swift */,
@@ -521,6 +530,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -529,6 +541,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -544,6 +559,7 @@
 			files = (
 				DD5F00F821B54DA2000BA4A8 /* UserRepository.swift in Sources */,
 				DDE525C121B64522006C5EC4 /* BasePresenter.swift in Sources */,
+				A73FBF5921B7E722009D46CB /* NotNullMapper.swift in Sources */,
 				DDFD507B21B78C9900A507FA /* UserLocalImpl.swift in Sources */,
 				DD5F00FB21B54DE8000BA4A8 /* LoginModel.swift in Sources */,
 				DDE525BB21B636C8006C5EC4 /* LoginPagePresenter.swift in Sources */,
@@ -555,6 +571,7 @@
 				DD5F00FD21B54FA6000BA4A8 /* UserRepositoryImpl.swift in Sources */,
 				DD5F00F221B5376A000BA4A8 /* UserRemoteImpl.swift in Sources */,
 				DD5D61E321B7A58700F3C6A7 /* PreferenceManager.swift in Sources */,
+				A73FBF5521B7D4E5009D46CB /* ObservableType.swift in Sources */,
 				DD5F00AD21B3CF8C000BA4A8 /* AppDelegate.swift in Sources */,
 				DD5D61E621B7D59300F3C6A7 /* UserRouter.swift in Sources */,
 				DD5F00EB21B3ED84000BA4A8 /* MvpApiService.swift in Sources */,

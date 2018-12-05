@@ -7,8 +7,8 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol UserRemoteRepo {
-    func doLogin(loginModel: LoginModel,response: @escaping (_ result: LoginResponse)->(),
-                 error: @escaping (_ message: String, _ statusCode:Int)->())
+    func doLogin(loginModel: LoginModel) -> Observable<LoginResponse>
 }
