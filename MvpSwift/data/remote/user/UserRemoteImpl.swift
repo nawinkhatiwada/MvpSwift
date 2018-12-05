@@ -10,7 +10,6 @@ import Foundation
 import RxSwift
 
 class UserRemoteImpl: UserRemoteRepo {
-    
     static let getInstance = UserRemoteImpl()
     
     func doLogin(loginModel: LoginModel) -> Observable<LoginResponse> {
@@ -18,6 +17,7 @@ class UserRemoteImpl: UserRemoteRepo {
         let password = loginModel.userPass
         let params = ["username": username, "password": password]
         
+
         return MvpApiService.shared.requestData(T: LoginResponse.self,
                                               url: Urls.loginUrl,
                                               method: .get,
