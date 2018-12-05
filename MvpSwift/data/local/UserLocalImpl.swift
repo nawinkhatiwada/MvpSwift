@@ -9,7 +9,14 @@
 import Foundation
 
 class UserLocalImpl: UserLocalRepo{
-    func saveUserDetails(loginResponse: LoginResponse) {
-        //TODO database or SharedPrefs
+    
+    var prefs = PreferenceManager.getInstance
+    
+    func saveUsername(loginResponse: LoginResponse) {
+        prefs.setUserName(loginResponse: loginResponse)
+    }
+    
+    func isUserLoggedIn() -> Bool {
+        return prefs.isUserLoggedIn()
     }
 }

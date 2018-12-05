@@ -17,7 +17,16 @@ class LoginViewController: UIViewController, LoginView {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = LoginPagePresenter(view:self)
+        let loggedIn = self.presenter?.isUserLoggedIn()
+        if(loggedIn!){
+            print(loggedIn)
+            // TODO add other impl. if user is logged In
+        }
     }
+    
+//    private func isUserLoggedIn()-> Bool{
+//        return (self.presenter?.isUserLoggedIn())!
+//    }
     
     @IBAction func onLoginButtonClicked(_ sender: Any) {
         let username = tbUsername.text

@@ -9,5 +9,6 @@
 import Foundation
 
 protocol UserLocalRepo{
-    func saveUserDetails(loginResponse:LoginResponse)
+    func saveUsername(loginResponse:LoginResponse)
+    func isUserLoggedIn()-> Bool
 }

@@ -23,7 +23,7 @@ class UserRepositoryImpl: UserRepository {
                  error: @escaping (String, Int) -> ()) {
         
         self.remoteRepo.doLogin(loginModel:loginModel,response: { (loginReponse) in
-            self.localRepo.saveUserDetails(loginResponse: loginReponse)
+            self.localRepo.saveUsername(loginResponse: loginReponse)
             response(loginReponse) //response callback
         
         }) { (statusMessage, statusCode) in
@@ -31,4 +31,7 @@ class UserRepositoryImpl: UserRepository {
         }
     }
     
+    func isUserLoggedIn() -> Bool {
+        return localRepo.isUserLoggedIn()
+    }
 }

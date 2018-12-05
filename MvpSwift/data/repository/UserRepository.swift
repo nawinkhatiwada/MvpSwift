@@ -11,4 +11,6 @@ import Foundation
 protocol UserRepository {
     func doLogin(loginModel:LoginModel, response: @escaping (_ result: LoginResponse)->(),
                  error: @escaping (_ message: String, _ statusCode:Int)->()) 
+
+    func isUserLoggedIn()-> Bool
 }

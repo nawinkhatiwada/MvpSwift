@@ -35,5 +35,8 @@ class  LoginPagePresenter: LoginPresenter {
                             self.view.showError(message: statusMessage)
                         }
     }
-   
+    
+    func isUserLoggedIn() -> Bool {
+        return repository.isUserLoggedIn()
+    }
 }
