@@ -18,8 +18,8 @@ class UserRemoteImpl: UserRemoteRepo {
         let password = loginModel.userPass
         let params = ["username": username, "password": password]
         
-        return MvpApiService.getInstance.requestData(T: LoginResponse.self,
-                                              url: Utils.loginUrl,
+        return MvpApiService.shared.requestData(T: LoginResponse.self,
+                                              url: Urls.loginUrl,
                                               method: .get,
                                               parameters: params,
                                               header: nil)
