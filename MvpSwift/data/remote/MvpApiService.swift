@@ -12,9 +12,10 @@ import ObjectMapper
 import AlamofireObjectMapper
 
 class MvpApiService {
-   
-    static let getInstance = MvpApiService()
+    static let shared = MvpApiService()
+    private init(){
     
+    }
     func requestData <T:Mappable>(T:T.Type,
                                   url:String,
                                   parameter:Parameters,

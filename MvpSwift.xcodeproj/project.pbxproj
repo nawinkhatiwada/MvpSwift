@@ -10,6 +10,8 @@
 		08B493C8ABEB4B152B95743A /* Pods_MvpSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB5A0B6C985885273E291D3 /* Pods_MvpSwift.framework */; };
 		87D30D29675CDB36E8D06CB8 /* Pods_MvpSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE0D0247A89D4ACAAAF2134 /* Pods_MvpSwiftTests.framework */; };
 		DD5D61E321B7A58700F3C6A7 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D61E221B7A58700F3C6A7 /* PreferenceManager.swift */; };
+		DD5D61E621B7D59300F3C6A7 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D61E521B7D59300F3C6A7 /* UserRouter.swift */; };
+		DD5D61E821B7E23800F3C6A7 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D61E721B7E23800F3C6A7 /* Urls.swift */; };
 		DD5F00AD21B3CF8C000BA4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5F00AC21B3CF8C000BA4A8 /* AppDelegate.swift */; };
 		DD5F00B221B3CF8C000BA4A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5F00B021B3CF8C000BA4A8 /* Main.storyboard */; };
 		DD5F00B421B3CF8E000BA4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD5F00B321B3CF8E000BA4A8 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		D6CA43DFA933ED1BBDA0ABE7 /* Pods-MvpSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvpSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvpSwift/Pods-MvpSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		DA47825136498043D8449563 /* Pods-MvpSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvpSwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvpSwiftUITests/Pods-MvpSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DD5D61E221B7A58700F3C6A7 /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
+		DD5D61E521B7D59300F3C6A7 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		DD5D61E721B7E23800F3C6A7 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		DD5F00A921B3CF8C000BA4A8 /* MvpSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvpSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD5F00AC21B3CF8C000BA4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD5F00B121B3CF8C000BA4A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +144,14 @@
 			path = prefs;
 			sourceTree = "<group>";
 		};
+		DD5D61E421B7D56E00F3C6A7 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				DD5D61E521B7D59300F3C6A7 /* UserRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
 		DD5F00A021B3CF8C000BA4A8 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +177,7 @@
 		DD5F00AB21B3CF8C000BA4A8 /* MvpSwift */ = {
 			isa = PBXGroup;
 			children = (
+				DD5D61E421B7D56E00F3C6A7 /* router */,
 				DD5D61E121B7A55700F3C6A7 /* prefs */,
 				DD5F00F921B54DD5000BA4A8 /* login */,
 				DD5F00F321B537AD000BA4A8 /* utils */,
@@ -264,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				DD5F00F421B537C2000BA4A8 /* Utils.swift */,
+				DD5D61E721B7E23800F3C6A7 /* Urls.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -533,6 +547,7 @@
 				DDFD507B21B78C9900A507FA /* UserLocalImpl.swift in Sources */,
 				DD5F00FB21B54DE8000BA4A8 /* LoginModel.swift in Sources */,
 				DDE525BB21B636C8006C5EC4 /* LoginPagePresenter.swift in Sources */,
+				DD5D61E821B7E23800F3C6A7 /* Urls.swift in Sources */,
 				DDE525BF21B63ABD006C5EC4 /* LoginViewController.swift in Sources */,
 				DD5F00F021B5375A000BA4A8 /* UserRemoteRepo.swift in Sources */,
 				DD5F00E021B3D5EB000BA4A8 /* BaseResponse.swift in Sources */,
@@ -541,6 +556,7 @@
 				DD5F00F221B5376A000BA4A8 /* UserRemoteImpl.swift in Sources */,
 				DD5D61E321B7A58700F3C6A7 /* PreferenceManager.swift in Sources */,
 				DD5F00AD21B3CF8C000BA4A8 /* AppDelegate.swift in Sources */,
+				DD5D61E621B7D59300F3C6A7 /* UserRouter.swift in Sources */,
 				DD5F00EB21B3ED84000BA4A8 /* MvpApiService.swift in Sources */,
 				DD5F00F521B537C2000BA4A8 /* Utils.swift in Sources */,
 				DDFD507921B78C8700A507FA /* UserLocalRepo.swift in Sources */,

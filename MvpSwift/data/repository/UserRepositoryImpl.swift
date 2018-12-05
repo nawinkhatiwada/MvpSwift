@@ -9,13 +9,12 @@
 import Foundation
 
 class UserRepositoryImpl: UserRepository {
-    
     var remoteRepo: UserRemoteRepo
     var localRepo: UserLocalRepo
     
-    init() {
-        remoteRepo = UserRemoteImpl()
-        localRepo = UserLocalImpl()
+    init(remoteRepo: UserRemoteRepo, localRepo:UserLocalRepo) {
+        self.remoteRepo = remoteRepo
+        self.localRepo = localRepo
     }
     
     func doLogin(loginModel: LoginModel,

@@ -16,10 +16,11 @@ class LoginViewController: UIViewController, LoginView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter = LoginPagePresenter(view:self)
+        self.presenter = LoginPagePresenter(view:self,
+                                    repository:UserRouter.getUserRepository)
         let loggedIn = self.presenter?.isUserLoggedIn()
         if(loggedIn!){
-            print(loggedIn)
+            print(loggedIn!)
             // TODO add other impl. if user is logged In
         }
     }
@@ -43,7 +44,7 @@ class LoginViewController: UIViewController, LoginView {
     }
     
     func showLoading(message: String) {
-        progress =  showDialog()
+        progress =  Utils.showLoadingIndicator(viewController:self)
         progress?.startAnimating()
     }
     
@@ -57,27 +58,13 @@ class LoginViewController: UIViewController, LoginView {
         self.showAlertDialog(title: "Login Error", message: message)
     }
     
-   private func showDialog()-> UIActivityIndicatorView{
-        let indicator: UIActivityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
-        indicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        indicator.center = self.view.center
-        indicator.hidesWhenStopped = true
-        self.view.addSubview(indicator)
-        self.view.bringSubviewToFront(indicator)
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        return indicator
-    }
-    
     private func hideDialog(){
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         progress?.stopAnimating()
     }
     
     private func showAlertDialog(title:String?, message:String?){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        let alert = Utils.showAlertDialog(title:title,message:message)
         self.present(alert, animated: true, completion: nil)
     }
-    
-
 }

@@ -9,14 +9,16 @@
 import Foundation
 
 class UserRemoteImpl: UserRemoteRepo {
+    
+    static let getInstance = UserRemoteImpl()
        
     func doLogin(loginModel: LoginModel, response: @escaping (_ result: LoginResponse)->(),
                      error: @escaping (_ message: String, _ statusCode:Int)->()){
         let username = loginModel.userName
         let password = loginModel.userPass
             let params = ["username": username, "password": password]
-            MvpApiService.getInstance.requestData(T: LoginResponse.self,
-                                                  url: Utils.loginUrl,
+            MvpApiService.shared.requestData(T: LoginResponse.self,
+                                                  url: Urls.loginUrl,
                                                   parameter: params,
                             success: { loginResponse in
                                 response(loginResponse)

@@ -13,9 +13,9 @@ class  LoginPagePresenter: LoginPresenter {
     var repository: UserRepository
     var view:LoginView
     
-    init(view : LoginView) {
+    init(view : LoginView, repository : UserRepository) {
         self.view = view
-        repository = UserRepositoryImpl()
+        self.repository = repository
     }
     
     func start() {
