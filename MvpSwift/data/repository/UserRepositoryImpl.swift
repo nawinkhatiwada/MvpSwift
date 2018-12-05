@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class UserRepositoryImpl: UserRepository {
     
@@ -17,18 +18,9 @@ class UserRepositoryImpl: UserRepository {
         remoteRepo = UserRemoteImpl()
         localRepo = UserLocalImpl()
     }
-    
-    func doLogin(loginModel: LoginModel,
-                 response: @escaping (LoginResponse) -> (),
-                 error: @escaping (String, Int) -> ()) {
+    func doLogin(loginModel: LoginModel) -> Observable<LoginResponse> {
+        return remoteRepo.doLogin(loginModel: loginModel)
         
-        self.remoteRepo.doLogin(loginModel:loginModel,response: { (loginReponse) in
-            self.localRepo.saveUsername(loginResponse: loginReponse)
-            response(loginReponse) //response callback
-        
-        }) { (statusMessage, statusCode) in
-            error(statusMessage, statusCode) //error callback
-        }
     }
     
     func isUserLoggedIn() -> Bool {

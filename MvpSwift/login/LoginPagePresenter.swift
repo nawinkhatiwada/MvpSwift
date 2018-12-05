@@ -28,12 +28,17 @@ class  LoginPagePresenter: LoginPresenter {
     
     func doLogin(loginModel: LoginModel) {
         self.view.showLoading(message: "Please wait...")
-        repository.doLogin(loginModel: loginModel,
-                           response: { (LoginResponse) in
-                            self.view.showLoginSuccess(message: "Login Success")
-                        }) { (statusMessage, statusCode) in
-                            self.view.showError(message: statusMessage)
-                        }
+        repository.doLogin(loginModel: loginModel).subscribe(onNext: { (loginResponse) in
+            print(loginResponse.username)
+            self.view.showLoginSuccess(message: "Login Success")
+        }, onError: { (error) in
+            print("error occured")
+            self.view.showError(message: "Login error")
+        }, onCompleted: {
+            
+        }) {
+            
+        }
     }
     
     func isUserLoggedIn() -> Bool {

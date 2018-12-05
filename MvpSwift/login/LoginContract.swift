@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol LoginPresenter: BasePresenter {
     func doLogin(loginModel:LoginModel)

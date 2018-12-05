@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
+import RxSwift
+import RxAlamofire
 
 class MvpApiService {
    
@@ -17,28 +19,13 @@ class MvpApiService {
     
     func requestData <T:Mappable>(T:T.Type,
                                   url:String,
-                                  parameter:Parameters,
-                              success: @escaping (_ result: T)->(),
-                              failure: @escaping (_ message: String, _ statusCode:Int)->()){
-    
-    Alamofire.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: [:]).responseObject {
-        (response:DataResponse<BaseResponse<T>>) in
+                                  method: HTTPMethod? = .get,
+                                  parameters: Parameters? = nil,
+                                  header:HTTPHeaders? = nil) -> (Observable<T>) {
         
-        let baseRes = response.result.value
-        if(baseRes != nil){
-            let data = baseRes?.data
-            let statusCode = baseRes?.statusCode
-            let statusMessage = baseRes?.statusMessage
-            if(data != nil){
-                success((baseRes?.data )!)
-            }else{
-                failure(statusMessage!, statusCode!)
-            }
-        }else{
-           failure("Server Error",500)
-        }
+        return RxAlamofire.requestJSON(method!, url, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
+            .mapObject(type:BaseResponse<T>.self)
+            .flatMap{response in NotNullMapper(t: response)}
+    
     }
-}
-    
-    
 }
