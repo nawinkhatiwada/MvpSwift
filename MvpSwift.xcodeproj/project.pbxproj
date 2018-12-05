@@ -282,12 +282,9 @@
 			isa = PBXGroup;
 			children = (
 				DD5F00F421B537C2000BA4A8 /* Utils.swift */,
-<<<<<<< HEAD
 				DD5D61E721B7E23800F3C6A7 /* Urls.swift */,
-=======
 				A73FBF5421B7D4E5009D46CB /* ObservableType.swift */,
 				A73FBF5821B7E722009D46CB /* NotNullMapper.swift */,
->>>>>>> Rx integration
 			);
 			path = utils;
 			sourceTree = "<group>";
