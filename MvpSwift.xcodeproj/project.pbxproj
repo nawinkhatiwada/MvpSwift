@@ -29,6 +29,8 @@
 		DDE525BD21B639BE006C5EC4 /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE525BC21B639BE006C5EC4 /* LoginContract.swift */; };
 		DDE525BF21B63ABD006C5EC4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE525BE21B63ABD006C5EC4 /* LoginViewController.swift */; };
 		DDE525C121B64522006C5EC4 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE525C021B64522006C5EC4 /* BasePresenter.swift */; };
+		DDFD507921B78C8700A507FA /* UserLocalRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD507821B78C8700A507FA /* UserLocalRepo.swift */; };
+		DDFD507B21B78C9900A507FA /* UserLocalImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD507A21B78C9900A507FA /* UserLocalImpl.swift */; };
 		FB854BA63AEE79FAC677D332 /* Pods_MvpSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C933D7DA1AA2B04B85018CB /* Pods_MvpSwiftUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		DDE525BC21B639BE006C5EC4 /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
 		DDE525BE21B63ABD006C5EC4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DDE525C021B64522006C5EC4 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		DDFD507821B78C8700A507FA /* UserLocalRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalRepo.swift; sourceTree = "<group>"; };
+		DDFD507A21B78C9900A507FA /* UserLocalImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalImpl.swift; sourceTree = "<group>"; };
 		F4B063C32E4916A27D7A6C22 /* Pods-MvpSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvpSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvpSwift/Pods-MvpSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				DD5F00E821B3DBDC000BA4A8 /* LocalRepo.swift */,
+				DDFD507821B78C8700A507FA /* UserLocalRepo.swift */,
+				DDFD507A21B78C9900A507FA /* UserLocalImpl.swift */,
 			);
 			path = local;
 			sourceTree = "<group>";
@@ -516,6 +522,7 @@
 			files = (
 				DD5F00F821B54DA2000BA4A8 /* UserRepository.swift in Sources */,
 				DDE525C121B64522006C5EC4 /* BasePresenter.swift in Sources */,
+				DDFD507B21B78C9900A507FA /* UserLocalImpl.swift in Sources */,
 				DD5F00FB21B54DE8000BA4A8 /* LoginModel.swift in Sources */,
 				DDE525BB21B636C8006C5EC4 /* LoginPagePresenter.swift in Sources */,
 				DDE525BF21B63ABD006C5EC4 /* LoginViewController.swift in Sources */,
@@ -528,6 +535,7 @@
 				DD5F00EB21B3ED84000BA4A8 /* MvpApiService.swift in Sources */,
 				DD5F00E921B3DBDC000BA4A8 /* LocalRepo.swift in Sources */,
 				DD5F00F521B537C2000BA4A8 /* Utils.swift in Sources */,
+				DDFD507921B78C8700A507FA /* UserLocalRepo.swift in Sources */,
 				DDE525BD21B639BE006C5EC4 /* LoginContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
