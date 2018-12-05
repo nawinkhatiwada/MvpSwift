@@ -17,7 +17,6 @@
 		DD5F00CD21B3CF8E000BA4A8 /* MvpSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5F00CC21B3CF8E000BA4A8 /* MvpSwiftUITests.swift */; };
 		DD5F00E021B3D5EB000BA4A8 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5F00DF21B3D5EB000BA4A8 /* BaseResponse.swift */; };
 		DD5F00E721B3DA61000BA4A8 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5F00E621B3DA61000BA4A8 /* LoginResponse.swift */; };
-		DD5F00E921B3DBDC000BA4A8 /* LocalRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5F00E821B3DBDC000BA4A8 /* LocalRepo.swift */; };
 		DD5F00EB21B3ED84000BA4A8 /* MvpApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5F00EA21B3ED84000BA4A8 /* MvpApiService.swift */; };
 		DD5F00F021B5375A000BA4A8 /* UserRemoteRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5F00EF21B5375A000BA4A8 /* UserRemoteRepo.swift */; };
 		DD5F00F221B5376A000BA4A8 /* UserRemoteImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5F00F121B5376A000BA4A8 /* UserRemoteImpl.swift */; };
@@ -74,7 +73,6 @@
 		DD5F00CE21B3CF8E000BA4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD5F00DF21B3D5EB000BA4A8 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		DD5F00E621B3DA61000BA4A8 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
-		DD5F00E821B3DBDC000BA4A8 /* LocalRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepo.swift; sourceTree = "<group>"; };
 		DD5F00EA21B3ED84000BA4A8 /* MvpApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvpApiService.swift; sourceTree = "<group>"; };
 		DD5F00EF21B5375A000BA4A8 /* UserRemoteRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteRepo.swift; sourceTree = "<group>"; };
 		DD5F00F121B5376A000BA4A8 /* UserRemoteImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteImpl.swift; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 		DD5F00DB21B3CFDD000BA4A8 /* local */ = {
 			isa = PBXGroup;
 			children = (
-				DD5F00E821B3DBDC000BA4A8 /* LocalRepo.swift */,
 				DDFD507821B78C8700A507FA /* UserLocalRepo.swift */,
 				DDFD507A21B78C9900A507FA /* UserLocalImpl.swift */,
 			);
@@ -533,7 +530,6 @@
 				DD5F00F221B5376A000BA4A8 /* UserRemoteImpl.swift in Sources */,
 				DD5F00AD21B3CF8C000BA4A8 /* AppDelegate.swift in Sources */,
 				DD5F00EB21B3ED84000BA4A8 /* MvpApiService.swift in Sources */,
-				DD5F00E921B3DBDC000BA4A8 /* LocalRepo.swift in Sources */,
 				DD5F00F521B537C2000BA4A8 /* Utils.swift in Sources */,
 				DDFD507921B78C8700A507FA /* UserLocalRepo.swift in Sources */,
 				DDE525BD21B639BE006C5EC4 /* LoginContract.swift in Sources */,
