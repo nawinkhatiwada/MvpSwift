@@ -24,10 +24,6 @@ class LoginViewController: UIViewController, LoginView {
         }
     }
     
-//    private func isUserLoggedIn()-> Bool{
-//        return (self.presenter?.isUserLoggedIn())!
-//    }
-    
     @IBAction func onLoginButtonClicked(_ sender: Any) {
         let username = tbUsername.text
         let password = tbPassword.text
